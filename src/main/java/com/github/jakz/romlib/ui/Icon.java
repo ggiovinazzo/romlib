@@ -91,9 +91,12 @@ public enum Icon
   
   public ImageIcon getIcon()
   {
-    if (icon == null)
-      icon = new ImageIcon(this.getClass().getClassLoader().getResource("com/github/jakz/romlib/ui/resources/"+name+".png"));
-    
+    if (icon == null){
+      //icon = new ImageIcon(this.getClass().getClassLoader().getResource("com/github/jakz/romlib/ui/resources/"+name+".png"));
+      System.out.println("NAME: "+name);
+      System.out.println("PATH:" + this.getClass().getResource("/ui/"+name+".png").getPath());
+      icon = new ImageIcon(this.getClass().getResource("/ui/"+name+".png"));
+    }
     return icon;
   }
 }

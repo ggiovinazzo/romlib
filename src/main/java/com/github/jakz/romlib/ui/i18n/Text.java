@@ -97,8 +97,8 @@ public enum Text implements I18N
   ROM_INFO_PATH,
   ;
   
-  private static final ResourceBundle res = ResourceBundle.getBundle("com.github.jakz.romlib.ui.i18n.Strings", Locale.ENGLISH);
-  
+  //private static final ResourceBundle res = ResourceBundle.getBundle("com.github.jakz.romlib.ui.i18n.Strings", Locale.ENGLISH);
+  private static final ResourceBundle res = ResourceBundle.getBundle("ui.i18n.Strings", Locale.ENGLISH);
   public String text()
   {
     return res.getString(this.name());
